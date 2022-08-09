@@ -8,6 +8,9 @@ function App() {
       <p>
         Hello World
       </p>
+      <div id='myDiv'>
+        This is my first react app
+      </div>
       </header>
     </div>
   );
