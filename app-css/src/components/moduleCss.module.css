@@ -1,0 +1,16 @@
+
+.darkClass p {
+    background-color: #34495e;
+    color: red;
+    border: 10px solid red;
+    padding: 70px;
+  }
+  
+  .lightClass p {
+    background-color: blue;
+    color: white;
+    border: 10px solid gold;
+    padding: 70px;
+    }
+    
+  
