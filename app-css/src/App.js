@@ -12,6 +12,7 @@ function App() {
       <CssInlineCoponent></CssInlineCoponent>
       <DinamicCss></DinamicCss>
       <ModuleCss></ModuleCss>
+      <hr></hr>
     </div>
   );
 }
