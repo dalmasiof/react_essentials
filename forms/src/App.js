@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     <FormComp></FormComp>
+     <FormComp user={{name:"Pastao", email:"Termiko"}} ></FormComp>
     </div>
   );
 }
