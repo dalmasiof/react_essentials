@@ -1,12 +1,12 @@
 import { useState } from "react";
 import HandleResult from "./HandleResult";
-const FormImc = () => {
+const FormImc = ({func}) => {
   const [weight, setWeight] = useState();
   const [height, setheight] = useState();
 
   const [imcResult, setimcResult] = useState(0);
 
-  function calculateIMC() {
+  function calculateIMC({func}) {
     let floatWeight = parseFloat(weight);
     let floatHeight = parseFloat(height);
 
@@ -51,6 +51,7 @@ const FormImc = () => {
       </form>
 
       <HandleResult props={imcResult}></HandleResult>
+      <button onClick={func}>Retornar</button>
     </div>
   );
 };
