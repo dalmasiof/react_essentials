@@ -1,18 +1,22 @@
 import { useState } from "react";
 import HandleResult from "./HandleResult";
-const FormImc = ({func}) => {
+const FormImc = ({ func }) => {
   const [weight, setWeight] = useState();
   const [height, setheight] = useState();
 
   const [imcResult, setimcResult] = useState(0);
 
-  function calculateIMC({func}) {
+  function calculateIMC({ func }) {
     let floatWeight = parseFloat(weight);
     let floatHeight = parseFloat(height);
 
     let result = floatWeight / (floatHeight *= floatHeight);
 
     setimcResult(result);
+  }
+
+  function formatValue(value) {
+    return value.replace(",", ".");
   }
 
   return (
@@ -23,9 +27,13 @@ const FormImc = ({func}) => {
             <span>Altura:</span>
           </div>
           <input
+            type="number"
+            required
+            min="0"
+            step=".01"
             name="altura"
             placeholder="Altura"
-            onChange={(e) => setheight(e.target.value)}
+            onChange={(e) => setheight(formatValue(e.target.value))}
           ></input>
         </label>
 
@@ -40,7 +48,7 @@ const FormImc = ({func}) => {
             step=".01"
             name="peso"
             placeholder="Peso"
-            onChange={(e) => setWeight(e.target.value)}
+            onChange={(e) => setWeight(formatValue(e.target.value))}
           ></input>
         </label>
         <div>
