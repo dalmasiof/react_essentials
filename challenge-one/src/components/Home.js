@@ -13,15 +13,23 @@ const Home = () => {
   }
 
   return (
-    <div class="mainContainer">
-      <div>
-        <img className="totoroGif" src={tt1}></img>
+    <div className="containers">
+      <div class="mainContainer">
+      <h1>Calculadora IMC</h1>
+        <div>
+          <img className="totoroGif" src={tt1}></img>
+        </div>
       </div>
-      <div>
-        {!shwoForm && <button onClick={() => setShowForm(!shwoForm)}>Start</button>}
-      </div>
-      <div>
-        {shwoForm &&  <FormImc func={closeForm}></FormImc>}
+     
+      <div className="subContainer">
+      {shwoForm && <h1>Preencha os campos</h1>}
+
+        <div>
+          {!shwoForm && <button onClick={() => setShowForm(!shwoForm)}>Start</button>}
+        </div>
+        <div>
+          {shwoForm &&  <FormImc func={closeForm}></FormImc>}
+        </div>
       </div>
     </div>
   );

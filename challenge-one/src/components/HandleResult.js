@@ -7,6 +7,7 @@ const HandleResult = ({ props }) => {
   return (
     <div>
       <h2>Resultado: {formatResult(props)}</h2>
+      <h3>Mensagem:</h3>
     </div>
   );
 };

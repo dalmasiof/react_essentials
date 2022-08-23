@@ -6,6 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #55E6C1;
 }
 
 code {
@@ -15,4 +17,5 @@ code {
 
 .totoroGif{
   width: 50vh;
+  border-radius: 50px;
 }
