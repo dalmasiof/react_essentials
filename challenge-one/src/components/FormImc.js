@@ -1,13 +1,14 @@
 import { useState } from "react";
 import HandleResult from "./HandleResult";
-const FormImc = ({ func }) => {
+import "../styles/home.css";
+
+const FormImc = ({ func ,funcGif}) => {
   const [weight, setWeight] = useState();
   const [height, setheight] = useState();
 
   const [imcResult, setimcResult] = useState(0);
 
   const [showResult, setShowResult] = useState(false);
-
 
   function calculateIMC({ func }) {
     let floatWeight = parseFloat(weight);
@@ -16,7 +17,7 @@ const FormImc = ({ func }) => {
     let result = floatWeight / (floatHeight *= floatHeight);
 
     setimcResult(result);
-    setShowResult(true)
+    setShowResult(true);
   }
 
   function formatValue(value) {
@@ -55,15 +56,20 @@ const FormImc = ({ func }) => {
             onChange={(e) => setWeight(formatValue(e.target.value))}
           ></input>
         </label>
-        <div>
-          <button onClick={calculateIMC} type="button">
-            Calcular IMC
-          </button>
-        </div>
       </form>
-
-      {showResult && <HandleResult props={imcResult}></HandleResult>}
-      <button onClick={func}>Retornar</button>
+      <div className="buttons">
+        <div>
+          {showResult && <HandleResult props={imcResult} funcGif={funcGif}></HandleResult>}
+          <button onClick={func}>Retornar</button>
+        </div>
+        <div>
+          {!showResult && (
+            <button onClick={calculateIMC} type="button">
+              Calcular IMC
+            </button>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

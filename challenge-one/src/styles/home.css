@@ -1,0 +1,8 @@
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons :last-child{
+    margin-left: auto;
+}
