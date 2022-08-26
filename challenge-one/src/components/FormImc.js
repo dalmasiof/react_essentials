@@ -6,6 +6,9 @@ const FormImc = ({ func }) => {
 
   const [imcResult, setimcResult] = useState(0);
 
+  const [showResult, setShowResult] = useState(false);
+
+
   function calculateIMC({ func }) {
     let floatWeight = parseFloat(weight);
     let floatHeight = parseFloat(height);
@@ -13,6 +16,7 @@ const FormImc = ({ func }) => {
     let result = floatWeight / (floatHeight *= floatHeight);
 
     setimcResult(result);
+    setShowResult(true)
   }
 
   function formatValue(value) {
@@ -58,7 +62,7 @@ const FormImc = ({ func }) => {
         </div>
       </form>
 
-      <HandleResult props={imcResult}></HandleResult>
+      {showResult && <HandleResult props={imcResult}></HandleResult>}
       <button onClick={func}>Retornar</button>
     </div>
   );

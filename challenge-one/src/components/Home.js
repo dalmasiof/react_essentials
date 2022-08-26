@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <div className="containers">
-      <div class="mainContainer">
+      <div className="mainContainer">
       <h1>Calculadora IMC</h1>
         <div>
           <img className="totoroGif" src={tt1}></img>
