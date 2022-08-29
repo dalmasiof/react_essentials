@@ -12,4 +12,5 @@ navBar a{
 
 .active{
     background-color: black;
+    color: white;
 }
