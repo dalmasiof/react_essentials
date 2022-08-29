@@ -4,11 +4,12 @@ import './App.css';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 //components
-import NavBar from './components/navBar';
+import NavBar from './components/NavBar';
 
 //pages
 import Home from './pages/Home';
 import About from './pages/About';
+import Product from './pages/Product';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
+          <Route path='/product/:id' element={<Product/>}/>
         </Routes>
 
       </BrowserRouter>
