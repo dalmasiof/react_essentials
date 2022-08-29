@@ -1,0 +1,15 @@
+navBar{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    color: azure;
+}
+
+navBar a{
+    color: red;
+}
+
+.active{
+    background-color: black;
+}
