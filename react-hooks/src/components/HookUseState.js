@@ -18,18 +18,19 @@ const HookUseState = () => {
       <p>Var: {userName}</p>
       <p>UseState: {name}</p>
       <button onClick={onBtnChangeClick}>Click</button>
-      <hr></hr>
-      <form onSubmit={onSubmitForm}>
-        <input
-          type="text"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-        />
-        <p>
-          You have <strong>{age}</strong> years old!!
-        </p>
-        <button type="submit">Submit form</button>
-      </form>
+      <div>
+        <form onSubmit={onSubmitForm}>
+          <input
+            type="text"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+          />
+          <p>
+            You have <strong>{age}</strong> years old!!
+          </p>
+          <button type="submit">Submit form</button>
+        </form>
+      </div>
     </div>
   );
 };
