@@ -7,7 +7,6 @@ const FormImc = ({ func ,funcGif}) => {
   const [height, setheight] = useState();
 
   const [imcResult, setimcResult] = useState(0);
-
   const [showResult, setShowResult] = useState(false);
 
   function calculateIMC({ func }) {
@@ -15,8 +14,8 @@ const FormImc = ({ func ,funcGif}) => {
     let floatHeight = parseFloat(height);
 
     let result = floatWeight / (floatHeight *= floatHeight);
-
-    setimcResult(result);
+    let formatedValue = result.toFixed(2);
+    setimcResult(formatedValue);
     setShowResult(true);
   }
 
